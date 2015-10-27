@@ -1,0 +1,9 @@
+version: 1.0.{build}
+before_build:
+- cmd: nuget restore
+build:
+  project: ServiceBusExplorer.sln
+  verbosity: minimal
+artifacts:
+- path: bin\Debug
+  name: ServiceBusExplorer
